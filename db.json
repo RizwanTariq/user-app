@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "email": "rizwan@mail.com",
+      "fullName": "rizwan",
+      "gender": "male",
+      "id": "1643440954134",
+      "password": "675786567b",
+      "terms": true
+    },
+    {
+      "fullName": "jhon",
+      "email": "jhon@mail.com",
+      "password": "786876gghg",
+      "gender": "male",
+      "terms": true,
+      "id": "1643452262637"
+    },
+    {
+      "fullName": "Rizwan",
+      "email": "mail@mail.com",
+      "password": "hjgjhgjhjhb",
+      "gender": "male",
+      "terms": true,
+      "id": "1643452572108"
+    },
+    {
+      "fullName": "ffgdfgdfg",
+      "email": "gdfgdf@mail.com",
+      "password": "435345fdgdfg",
+      "gender": "male",
+      "terms": true,
+      "id": "1643607625030"
+    }
+  ]
+}

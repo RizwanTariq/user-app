@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SignUpForm :handleSubmit="handleSubmit" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import SignUpForm from '../components/Form.vue'
+import { getUsers, createUser } from '../services/userService'
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  components: { SignUpForm },
+  data() {
+    return {
+      users: [],
+    }
+  },
+  created: async function () {
+    this.users = await getUsers()
+  },
+  methods: {
+    handleSubmit: async function (user) {
+      const newUser = await createUser(user)
+      this.users = [...this.users, newUser]
+      this.$router.push({ name: 'User', params: { id: newUser.id } })
+    },
+  },
 }
 </script>
